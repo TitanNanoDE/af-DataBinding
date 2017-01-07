@@ -1,0 +1,28 @@
+{
+  "name": "af-databinding",
+  "version": "1.0.0",
+  "description": "Data Binding module for ApplicationFrame",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TitanNanoDE/af-DataBinding.git"
+  },
+  "keywords": [
+    "application-frame",
+    "ApplicationFrame",
+    "af",
+    "af-module"
+  ],
+  "author": "Jovan Gerodetti (TitanNano)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/TitanNanoDE/af-DataBinding/issues"
+  },
+  "homepage": "https://github.com/TitanNanoDE/af-DataBinding#readme",
+  "dependencies": {
+    "application-frame": "^0.5.0"
+  }
+}
