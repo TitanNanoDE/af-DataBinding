@@ -1,4 +1,4 @@
-# AF DataBinding
+# AF DataBinding [![Codacy Badge](https://api.codacy.com/project/badge/Grade/52c8abec92134998a497fea899abb5cd)](https://www.codacy.com/app/TitanNanoDE/af-DataBinding?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=TitanNanoDE/af-DataBinding&amp;utm_campaign=Badge_Grade)
 AF DataBinding is a up coming Data Binding module for [ApplicationFrame](https://github.com/TitanNanoDE/ApplicationFrame).
 
 This library allows fast, high performant and extensible data binding.
