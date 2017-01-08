@@ -1,6 +1,6 @@
 {
   "name": "@af-modules/databinding",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Data Binding module for ApplicationFrame",
   "main": "main.js",
   "scripts": {
