@@ -1,5 +1,13 @@
 /* eslint-env node */
 const fs = require('fs');
+const path = require('path');
+
+const linkModule = function(source, target) {
+    source = path.dirname(require.resolve('application-frame'));
+    source = path.relative(__dirname, source);
+
+    fs.symlinkSync(source, target, 'dir');
+};
 
 console.log('creating system links...');
 
@@ -9,4 +17,4 @@ if (fs.existsSync('./af')) {
 }
 
 // create all soft links
-fs.symlinkSync('./node_modules/application-frame', 'af', 'dir');
+linkModule('application-frame', 'af');
