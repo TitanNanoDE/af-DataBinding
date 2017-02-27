@@ -13,6 +13,7 @@ import './lib/ElementToScopeBinding.js';
 import './lib/AttributeBinding.js';
 import './lib/HtmlBinding.js';
 import './lib/CloakBinding.js';
+import './lib/bindings/AnimationBinding';
 
 NodeList.prototype.forEach = NamedNodeMap.prototype.forEach = Array.prototype.forEach;
 
@@ -40,6 +41,9 @@ export let DataBinding = {
     bindNode : bindNode,
     ViewPort : ViewPort,
 };
+
+export { ANIMATION_BINDING_LOOPED } from './lib/bindings/AnimationBinding';
+
 
 export default DataBinding;
 
