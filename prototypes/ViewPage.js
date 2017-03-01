@@ -16,7 +16,7 @@ const ViewPage = {
 
     isActive: false,
 
-    animatePageIntoView(element) {
+    animateSlideIn(element) {
         const promise = this._awaitTransitionEnd(element);
 
         element.classList.add('movePageIn');
@@ -24,7 +24,7 @@ const ViewPage = {
         return promise;
     },
 
-    animatePageOutOfView(element) {
+    animateSlideOut(element) {
         const promise = this._awaitTransitionEnd();
 
         element.classList.remove('movePageIn');
@@ -39,11 +39,11 @@ const ViewPage = {
 const styleELemen = document.createElement('style');
 
 styleELemen.innerHTML = `
-    [page] {
+    [slide-page] {
         transition: transform .3s ease-out;
     }
 
-    [page]:not(.movePageIn) {
+    [slide-page]:not(.movePageIn) {
         transition: transform .3s ease-in;
         transform: translate3d(-100%, 0, 0);
     }
