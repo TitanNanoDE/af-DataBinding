@@ -1,12 +1,13 @@
 import ViewController from './ViewController';
+import { RenderEngine } from 'application-frame/rendering';
 
 const ViewPage = {
 
     route: null,
 
     _awaitTransitionEnd(element) {
-        const promise = new Promise(done => element.addEventListener('tranistionend', function callback() {
-            element.removeEventListener(callback);
+        const promise = new Promise(done => element.addEventListener('transitionend', function callback() {
+            element.removeEventListener('transitionend', callback);
 
             done();
         }));
@@ -16,18 +17,41 @@ const ViewPage = {
 
     isActive: false,
 
+    _forceVisible: false,
+
+    get isVisible() {
+        return this.isActive || this._forceVisible;
+    },
+
     animateSlideIn(element) {
         const promise = this._awaitTransitionEnd(element);
 
-        element.classList.add('movePageIn');
+        RenderEngine.scheduleRenderTask(() => {
+            element.classList.add('movePageIn');
+        });
 
         return promise;
     },
 
     animateSlideOut(element) {
-        const promise = this._awaitTransitionEnd();
 
-        element.classList.remove('movePageIn');
+        if (!element.classList.contains('movePageIn')) {
+            return true;
+        }
+
+        const promise = this._awaitTransitionEnd(element)
+            .then(() => {
+                this._forceVisible = false;
+                this.scope.__apply__();
+            });
+
+        // make sure the page stays visible until we are done.
+        this._forceVisible = true;
+        this.scope.__apply__();
+
+        RenderEngine.schedulePostRenderTask(() => {
+            element.classList.remove('movePageIn');
+        });
 
         return promise;
     },
@@ -45,7 +69,7 @@ styleELemen.innerHTML = `
 
     [slide-page]:not(.movePageIn) {
         transition: transform .3s ease-in;
-        transform: translate3d(-100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
     }
 `;
 
