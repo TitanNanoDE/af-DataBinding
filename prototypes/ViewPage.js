@@ -26,6 +26,8 @@ const ViewPage = {
     animateSlideIn(element) {
         const promise = this._awaitTransitionEnd(element);
 
+	this._forceVisible = true;
+
         RenderEngine.scheduleRenderTask(() => {
             element.classList.add('movePageIn');
         });
