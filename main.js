@@ -20,11 +20,11 @@ NodeList.prototype.forEach = NamedNodeMap.prototype.forEach = Array.prototype.fo
 let style = document.createElement('style');
 
 style.innerHTML = `
-    [bind-display="false"] {
+    [bind-display="false"]:not(.animated) {
         display: none !important;
     }
 
-    [bind-visible="false"] {
+    [bind-visible="false"]:not(.animated) {
         visibility: hidden;
     }
 `;
