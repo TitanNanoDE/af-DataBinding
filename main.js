@@ -4,9 +4,8 @@
  * @module DataBinding
  * @default module:DataBinding.DataBinding
  */
-import { makeTemplate } from './lib/Template.js';
+import { makeTemplate, createTemplateInstance } from './lib/Template.js';
 import { polyInvoke } from './lib/Util.js';
-import { bindNode } from './lib/Bind.js';
 import ViewPort from './lib/ViewPort.js';
 import './lib/IfBinding.js';
 import './lib/ElementToScopeBinding.js';
@@ -38,8 +37,8 @@ polyInvoke(document.head).appendChild(style);
  */
 export let DataBinding = {
     makeTemplate : makeTemplate,
-    bindNode : bindNode,
     ViewPort : ViewPort,
+    createTemplateInstance: createTemplateInstance,
 };
 
 export { ANIMATION_BINDING_LOOPED } from './lib/bindings/AnimationBinding';
