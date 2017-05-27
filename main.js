@@ -13,6 +13,8 @@ import './lib/AttributeBinding.js';
 import './lib/HtmlBinding.js';
 import './lib/CloakBinding.js';
 import './lib/bindings/AnimationBinding';
+import './lib/bindings/TemplateRepeatBinding.js';
+
 
 NodeList.prototype.forEach = NamedNodeMap.prototype.forEach = Array.prototype.forEach;
 
