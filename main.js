@@ -9,11 +9,11 @@ import { polyInvoke } from './lib/Util.js';
 import ViewPort from './lib/ViewPort.js';
 import './lib/IfBinding.js';
 import './lib/ElementToScopeBinding.js';
-import './lib/AttributeBinding.js';
 import './lib/HtmlBinding.js';
 import './lib/CloakBinding.js';
+import './lib/bindings/AttributeBinding';
 import './lib/bindings/AnimationBinding';
-import './lib/bindings/TemplateRepeatBinding.js';
+import './lib/bindings/TemplateRepeatBinding';
 
 
 NodeList.prototype.forEach = NamedNodeMap.prototype.forEach = Array.prototype.forEach;
