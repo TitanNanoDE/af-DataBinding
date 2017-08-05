@@ -44,7 +44,7 @@ export let DataBinding = {
 };
 
 export { ANIMATION_BINDING_LOOPED } from './lib/bindings/AnimationBinding';
-
+export { default as BindingApi } from './lib/BindingApi';
 
 export default DataBinding;
 
