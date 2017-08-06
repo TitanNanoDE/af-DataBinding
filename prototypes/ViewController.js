@@ -5,10 +5,6 @@ const ViewController = {
 
     scope: null,
 
-    _getNewScope() {
-        return { view: this };
-    },
-
     constructor() {
         let template = this.template;
 
@@ -16,7 +12,7 @@ const ViewController = {
             template = `#${template}`;
         }
 
-        this.scope = DataBinding.makeTemplate(template, this._getNewScope()).scope;
+        this.scope = DataBinding.createTemplateInstance({ template, scope: this }).scope;
     },
 
     useInAutoBinding() {
