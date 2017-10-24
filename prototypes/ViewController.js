@@ -16,7 +16,7 @@ const ViewController = {
     },
 
     useInAutoBinding() {
-        return { view: Object.create(this) };
+        return Object.create(this);
     },
 
     isActive: false,
