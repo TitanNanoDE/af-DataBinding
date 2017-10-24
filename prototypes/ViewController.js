@@ -25,12 +25,12 @@ const ViewController = {
 
     onRouteEnter() {
         this.isActive = true;
-        this.scope.__apply__();
+        this.scope.update();
     },
 
     onRouteLeave() {
         this.isActive = false;
-        this.scope.__apply__();
+        this.scope.update();
     }
 };
 
