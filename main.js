@@ -5,6 +5,7 @@
  * @default module:DataBinding.DataBinding
  */
 import { makeTemplate, createTemplateInstance } from './lib/Template.js';
+import { attachBindings } from './lib/Bind';
 import { polyInvoke } from './lib/Util.js';
 import ViewPort from './lib/ViewPort.js';
 import './lib/IfBinding.js';
@@ -42,6 +43,7 @@ export let DataBinding = {
     makeTemplate : makeTemplate,
     ViewPort : ViewPort,
     createTemplateInstance: createTemplateInstance,
+    attachBindings,
 };
 
 export { ANIMATION_BINDING_LOOPED } from './lib/bindings/AnimationBinding';
