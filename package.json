@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/TitanNanoDE/af-DataBinding#readme",
   "dependencies": {
-    "application-frame": "^0.7.0-dev.2"
+    "application-frame": "^0.7.0-dev.5"
   }
 }
