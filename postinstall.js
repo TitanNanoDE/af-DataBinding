@@ -3,8 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 const linkModule = function(source, target) {
-    source = path.dirname(require.resolve('application-frame'));
-    source = path.relative(__dirname, source);
+    source = path.dirname(require.resolve('application-frame/core/Application'));
+    source = path.relative(__dirname, path.dirname(source));
 
     fs.symlinkSync(source, target, 'dir');
 };
