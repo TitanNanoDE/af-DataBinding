@@ -9,7 +9,7 @@ const linkModule = function(source, target) {
     fs.symlinkSync(source, target, 'dir');
 };
 
-console.log('creating system links...');
+global.console.log('creating system links...');
 
 // remove existing soft links
 if (fs.existsSync('./af')) {

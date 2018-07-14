@@ -8,6 +8,7 @@ import { makeTemplate, createTemplateInstance } from './lib/Template.js';
 import { attachBindings } from './lib/Bind';
 import { polyInvoke } from './lib/Util.js';
 import ViewPort from './lib/ViewPort.js';
+import * as Config from './lib/Config';
 import './lib/IfBinding.js';
 import './lib/ElementToScopeBinding.js';
 import './lib/HtmlBinding.js';
@@ -36,11 +37,19 @@ style.innerHTML = `
 
 polyInvoke(document.head).appendChild(style);
 
+export const DataBindingMeta = {
+    enableLogging: Config.enableLogging,
+    enableVerboseLogging: Config.enableVerboseLogging,
+
+    get object() { return DataBinding; }
+};
+
 /**
  * [DataBinding description]
  *
  * @type {module:DataBinding.ModuleInterface}
  */
+// [meta*]
 export let DataBinding = {
     makeTemplate : makeTemplate,
     ViewPort : ViewPort,
