@@ -1,6 +1,6 @@
 {
   "name": "@af-modules/databinding",
-  "version": "1.2.0-dev.12",
+  "version": "1.2.0-dev.13",
   "description": "Data Binding module for ApplicationFrame",
   "main": "main.js",
   "scripts": {
@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/TitanNanoDE/af-DataBinding#readme",
   "dependencies": {
-    "application-frame": "^0.7.0-dev.5"
+    "application-frame": "^1.0.0"
   }
 }
