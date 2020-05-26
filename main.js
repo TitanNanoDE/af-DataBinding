@@ -5,7 +5,7 @@
  * @default module:DataBinding.DataBinding
  */
 import { makeTemplate, createTemplateInstance } from './lib/Template.js';
-import { attachBindings } from './lib/Bind';
+import { attachBindings, registerBindings } from './lib/Bind';
 import { polyInvoke } from './lib/Util.js';
 import ViewPort from './lib/ViewPort.js';
 import * as Config from './lib/Config';
@@ -19,6 +19,7 @@ import './lib/bindings/TemplateRepeatBinding';
 import './lib/bindings/EventBinding';
 import './lib/bindings/StyleBinding';
 import './lib/bindings/AutoBinding';
+import './lib/bindings/TextBinding';
 
 
 NodeList.prototype.forEach = NamedNodeMap.prototype.forEach = Array.prototype.forEach;
@@ -55,6 +56,7 @@ export let DataBinding = {
     ViewPort : ViewPort,
     createTemplateInstance: createTemplateInstance,
     attachBindings,
+    registerBindings,
 };
 
 export { ANIMATION_BINDING_LOOPED } from './lib/bindings/AnimationBinding';

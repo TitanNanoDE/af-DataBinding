@@ -1,0 +1,62 @@
+<template id="afdb-bindID-262928625306">
+    <paper-material elevation="2" page="" slide-page="" goal-steps-page="" bind-display="view.isVisible" bind-animation="{&nbsp;view.isActive: view.animateSlideIn, view.isNotActive: view.animateSlideOut }" id="afdb-bindID-269971787498">
+        <mwc-top-app-bar type="fixed" bind-query(scroll-target)="[goal-steps-page] .content">
+            <paper-icon-button slot="navigationIcon" icon="arrow-back" id="afdb-bindID-133017418587"></paper-icon-button>
+            <div slot="title" class="title"><span data-text-binding="true" id="afdb-bindID-284448832729"></span></div>
+            <paper-icon-button slot="actionItems" icon="editor:mode-edit" id="afdb-bindID-80420222795"></paper-icon-button>
+        </mwc-top-app-bar>
+
+        <div class="content">
+            <div class="step-list layout vertical">
+                <template id="afdb-bindID-123341263207">
+                    <paper-card class="flex pased-step-card">
+                        <div class="card-title">
+                            <h5><span data-text-binding="true" id="afdb-bindID-894664406060"></span></h5>
+                            <div class="subtitle"><span data-text-binding="true" id="afdb-bindID-812183112418"></span></div>
+                        </div>
+                        <div class="card-content"><span data-text-binding="true" id="afdb-bindID-987445293269"></span></div>
+                    </paper-card>
+                </template>
+                <paper-card elevation="5" class="flex" scope-id="view.currentStepElement">
+                    <div class="card-title">
+                        <h5><span data-text-binding="true" id="afdb-bindID-388341898022"></span></h5>
+                        <div class="subtitle"><span data-text-binding="true" id="afdb-bindID-610563569263"></span></div>
+                    </div>
+                    <textarea placeholder="Enter new notes for your current step..." material-full-width="" rows="10" id="afdb-bindID-737629633113"></textarea>
+                    <div class="card-actions">
+                        <paper-button class="primary" id="afdb-bindID-149838033895">
+                            Complete
+                        </paper-button>
+                    </div>
+                </paper-card>
+                <template id="afdb-bindID-1164558698378">
+                    <paper-card class="flex">
+                        <div class="card-title">
+                            <h5><span data-text-binding="true" id="afdb-bindID-1033433230651"></span></h5>
+                            <div class="subtitle"><span data-text-binding="true" id="afdb-bindID-987384203355"></span></div>
+                        </div>
+                        <div class="card-content"><span data-text-binding="true" id="afdb-bindID-1213045378491"></span></div>
+                    </paper-card>
+                </template>
+            </div>
+        </div>
+
+        <paper-dialog modal="true" entry-animation="scale-up-animation" scope-id="view.doneDialog" exit-animation="fade-out-animation">
+            <h2>Whats Up next?</h2>
+            <div class="layout vertical action-list">
+                <paper-item id="afdb-bindID-1480933760973">
+                    I achived my goal!
+                    <paper-ripple></paper-ripple>
+                </paper-item>
+                <paper-item id="afdb-bindID-1494733252025">
+                    I have an other step.
+                    <paper-ripple></paper-ripple>
+                </paper-item>
+                <paper-item id="afdb-bindID-92659266988">
+                    Nevermind, take me back.
+                    <paper-ripple></paper-ripple>
+                </paper-item>
+            </div>
+        </paper-dialog>
+    </paper-material>
+</template>

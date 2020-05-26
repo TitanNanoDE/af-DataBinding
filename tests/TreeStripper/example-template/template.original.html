@@ -1,0 +1,68 @@
+<template>
+    <paper-material elevation="2" page slide-page goal-steps-page bind-display="view.isVisible"
+        bind-animation="{ view.isActive: view.animateSlideIn, view.isNotActive: view.animateSlideOut }">
+        <mwc-top-app-bar type="fixed" bind-query(scroll-target)="[goal-steps-page] .content">
+            <paper-icon-button slot="navigationIcon" icon="arrow-back" bind-event(click)="view.onNavigateBack"></paper-icon-button>
+            <div slot="title" class="title">{{view.currentGoal.title}}</div>
+            <paper-icon-button slot="actionItems" icon="editor:mode-edit" bind-event(click)="view.onEnterGoalEdit"></paper-icon-button>
+        </mwc-top-app-bar>
+
+        <div class="content">
+            <div class="step-list layout vertical">
+                <template bind-repeat(fast)="step in view.previousSteps">
+                    <paper-card class="flex pased-step-card">
+                        <div class="card-title">
+                            <h5>{{step.title}}</h5>
+                            <div class="subtitle">Due to: {{view.util.formatDate(step.dueTo)}}</div>
+                        </div>
+                        <div class="card-content">{{step.noteData}}</div>
+                    </paper-card>
+                </template>
+                <paper-card elevation="5" class="flex" scope-id="view.currentStepElement">
+                    <div class="card-title">
+                        <h5>{{view.currentStep.title}}</h5>
+                        <div class="subtitle">Due to: {{view.util.formatDate(view.currentStep.dueTo)}}</div>
+                    </div>
+                    <textarea placeholder="Enter new notes for your current step..."
+                        material-full-width rows="10"
+                        bind-attr(value)="view.currentStepNotes=input"></textarea>
+                    <div class="card-actions">
+                        <paper-button class="primary"
+                            bind-event(click)="view.onMarkAsDone">
+                            Complete
+                        </paper-button>
+                    </div>
+                </paper-card>
+                <template bind-repeat(fast)="step in view.futureSteps">
+                    <paper-card class="flex">
+                        <div class="card-title">
+                            <h5>{{step.title}}</h5>
+                            <div class="subtitle">Due to: {{view.util.formatDate(step.dueTo)}}</div>
+                        </div>
+                        <div class="card-content">{{step.noteData}}</div>
+                    </paper-card>
+                </template>
+            </div>
+        </div>
+
+        <paper-dialog modal="true" entry-animation="scale-up-animation"
+            scope-id="view.doneDialog"
+            exit-animation="fade-out-animation">
+            <h2>Whats Up next?</h2>
+            <div class="layout vertical action-list">
+                <paper-item bind-event(click)="view.onReallyDone">
+                    I achived my goal!
+                    <paper-ripple></paper-ripple>
+                </paper-item>
+                <paper-item bind-event(click)="view.onDoneAndNext">
+                    I have an other step.
+                    <paper-ripple></paper-ripple>
+                </paper-item>
+                <paper-item bind-event(click)="view.onCancelDone">
+                    Nevermind, take me back.
+                    <paper-ripple></paper-ripple>
+                </paper-item>
+            </div>
+        </paper-dialog>
+    </paper-material>
+</template>
