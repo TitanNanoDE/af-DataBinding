@@ -20,6 +20,7 @@ import './lib/bindings/EventBinding';
 import './lib/bindings/StyleBinding';
 import './lib/bindings/AutoBinding';
 import './lib/bindings/ClassBinding';
+import './lib/bindings/EnabledBinding';
 
 
 NodeList.prototype.forEach = NamedNodeMap.prototype.forEach = Array.prototype.forEach;
