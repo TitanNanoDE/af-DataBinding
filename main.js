@@ -19,6 +19,7 @@ import './lib/bindings/TemplateRepeatBinding';
 import './lib/bindings/EventBinding';
 import './lib/bindings/StyleBinding';
 import './lib/bindings/AutoBinding';
+import './lib/bindings/ClassBinding';
 
 
 NodeList.prototype.forEach = NamedNodeMap.prototype.forEach = Array.prototype.forEach;
