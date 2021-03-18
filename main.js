@@ -9,7 +9,7 @@ import { attachBindings } from './lib/Bind';
 import { polyInvoke } from './lib/Util.js';
 import ViewPort from './lib/ViewPort.js';
 import * as Config from './lib/Config';
-import './lib/IfBinding.js';
+import './lib/bindings/IfBinding.js';
 import './lib/ElementToScopeBinding.js';
 import './lib/HtmlBinding.js';
 import './lib/CloakBinding.js';
