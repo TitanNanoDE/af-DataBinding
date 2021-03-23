@@ -21,6 +21,7 @@ import './lib/bindings/StyleBinding';
 import './lib/bindings/AutoBinding';
 import './lib/bindings/ClassBinding';
 import './lib/bindings/EnabledBinding';
+import './lib/bindings/TwoWayBinding.js';
 
 
 NodeList.prototype.forEach = NamedNodeMap.prototype.forEach = Array.prototype.forEach;
