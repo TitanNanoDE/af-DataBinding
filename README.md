@@ -1,5 +1,5 @@
 # AF DataBinding CCC
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/52c8abec92134998a497fea899abb5cd)](https://www.codacy.com/app/TitanNanoDE/af-DataBinding?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=TitanNanoDE/af-DataBinding&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5616ab0d6d354b9d9df28d7849d2cf1e)](https://www.codacy.com/gh/TitanNanoDE/af-DataBinding/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=TitanNanoDE/af-DataBinding&amp;utm_campaign=Badge_Grade)
 [![npm version](https://badge.fury.io/js/%40af-modules%2Fdatabinding.svg)](https://badge.fury.io/js/%40af-modules%2Fdatabinding)
 
 AF DataBinding is a up coming Data Binding module for [ApplicationFrame](https://github.com/TitanNanoDE/ApplicationFrame).
@@ -11,7 +11,7 @@ With the integrated extension API it is possible to add custom bindings as desir
 Bindings are processed synchronously but view updates happen asynchronously.
 This allows the binding system to operate fast and non blocking.
 Users also don't have to worry about accidentally starting multiple update cycles,
-since there will be always be just one update cycle at the end of a call stack
+since there will always be just one update cycle at the end of a call stack
 
 
 ## How To
