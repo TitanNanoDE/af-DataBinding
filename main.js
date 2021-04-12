@@ -12,7 +12,7 @@ import * as Config from './lib/Config';
 import './lib/bindings/IfBinding.js';
 import './lib/ElementToScopeBinding.js';
 import './lib/HtmlBinding.js';
-import './lib/CloakBinding.js';
+import './lib/bindings/CloakBinding.js';
 import './lib/bindings/AttributeBinding';
 import './lib/bindings/AnimationBinding';
 import './lib/bindings/TemplateRepeatBinding';
