@@ -10,7 +10,7 @@ import { polyInvoke } from './lib/Util.js';
 import ViewPort from './lib/ViewPort.js';
 import * as Config from './lib/Config';
 import './lib/bindings/IfBinding.js';
-import './lib/ElementToScopeBinding.js';
+import './lib/bindings/ElementToScopeBinding.js';
 import './lib/bindings/HtmlBinding.js';
 import './lib/bindings/CloakBinding.js';
 import './lib/bindings/AttributeBinding';
